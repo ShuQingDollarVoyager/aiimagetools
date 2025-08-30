@@ -1,0 +1,162 @@
+[
+  {
+    "id": 1,
+    "name": "Midjourney",
+    "slug": "midjourney",
+    "description": "Industry-leading AI art generator creating stunning, artistic images from text prompts",
+    "category": "ai-art",
+    "tags": ["AI Art", "Text-to-Image", "Creative"],
+    "pricing": {
+      "type": "subscription",
+      "startingPrice": 10,
+      "currency": "USD",
+      "billingPeriod": "monthly"
+    },
+    "rating": 4.8,
+    "reviews": 2300,
+    "website": "https://www.midjourney.com",
+    "logo": "/images/logos/midjourney.png",
+    "featured": true,
+    "popular": true
+  },
+  {
+    "id": 2,
+    "name": "DALL-E 3",
+    "slug": "dall-e-3",
+    "description": "OpenAI's advanced AI image generator with incredible detail and accuracy",
+    "category": "ai-art",
+    "tags": ["AI Art", "Text-to-Image", "OpenAI"],
+    "pricing": {
+      "type": "subscription",
+      "startingPrice": 20,
+      "currency": "USD",
+      "billingPeriod": "monthly"
+    },
+    "rating": 4.7,
+    "reviews": 1850,
+    "website": "https://openai.com/dall-e-3",
+    "logo": "/images/logos/dalle.png",
+    "featured": true,
+    "popular": true
+  },
+  {
+    "id": 3,
+    "name": "Remove.bg",
+    "slug": "remove-bg",
+    "description": "Instantly remove backgrounds from images with one click. Perfect for e-commerce and design",
+    "category": "background",
+    "tags": ["Background Removal", "Quick Edit", "E-commerce"],
+    "pricing": {
+      "type": "freemium",
+      "startingPrice": 0,
+      "paidPrice": 9,
+      "currency": "USD",
+      "billingPeriod": "monthly"
+    },
+    "rating": 4.9,
+    "reviews": 5100,
+    "website": "https://www.remove.bg",
+    "logo": "/images/logos/removebg.png",
+    "featured": true,
+    "freeTier": true
+  },
+  {
+    "id": 4,
+    "name": "Topaz Photo AI",
+    "slug": "topaz-photo-ai",
+    "description": "Professional photo enhancement using AI. Denoise, sharpen, and upscale images perfectly",
+    "category": "enhance",
+    "tags": ["Enhance", "Upscale", "Professional"],
+    "pricing": {
+      "type": "one-time",
+      "price": 199,
+      "currency": "USD"
+    },
+    "rating": 4.3,
+    "reviews": 890,
+    "website": "https://www.topazlabs.com/topaz-photo-ai",
+    "logo": "/images/logos/topaz.png",
+    "featured": true,
+    "professional": true
+  },
+  {
+    "id": 5,
+    "name": "Stable Diffusion",
+    "slug": "stable-diffusion",
+    "description": "Open-source AI image generation model with unlimited creative possibilities",
+    "category": "ai-art",
+    "tags": ["AI Art", "Open Source", "Text-to-Image"],
+    "pricing": {
+      "type": "free",
+      "price": 0,
+      "currency": "USD"
+    },
+    "rating": 4.5,
+    "reviews": 3200,
+    "website": "https://stability.ai",
+    "logo": "/images/logos/stable-diffusion.png",
+    "featured": false,
+    "openSource": true
+  },
+  {
+    "id": 6,
+    "name": "Canva AI",
+    "slug": "canva-ai",
+    "description": "AI-powered design tools integrated into Canva's easy-to-use platform",
+    "category": "design",
+    "tags": ["Design", "AI Tools", "Templates"],
+    "pricing": {
+      "type": "freemium",
+      "startingPrice": 0,
+      "paidPrice": 12.99,
+      "currency": "USD",
+      "billingPeriod": "monthly"
+    },
+    "rating": 4.6,
+    "reviews": 4500,
+    "website": "https://www.canva.com",
+    "logo": "/images/logos/canva.png",
+    "featured": false,
+    "freeTier": true
+  },
+  {
+    "id": 7,
+    "name": "Lensa AI",
+    "slug": "lensa-ai",
+    "description": "Create magical AI avatars and enhance selfies with advanced AI technology",
+    "category": "avatar",
+    "tags": ["Avatar", "Selfie", "Portrait"],
+    "pricing": {
+      "type": "subscription",
+      "startingPrice": 7.99,
+      "currency": "USD",
+      "billingPeriod": "monthly"
+    },
+    "rating": 4.2,
+    "reviews": 2100,
+    "website": "https://prisma-ai.com/lensa",
+    "logo": "/images/logos/lensa.png",
+    "featured": false,
+    "popular": true
+  },
+  {
+    "id": 8,
+    "name": "Runway ML",
+    "slug": "runway-ml",
+    "description": "Professional AI creative tools for video, image, and audio editing",
+    "category": "professional",
+    "tags": ["Video", "Professional", "Creative Suite"],
+    "pricing": {
+      "type": "subscription",
+      "startingPrice": 12,
+      "currency": "USD",
+      "billingPeriod": "monthly"
+    },
+    "rating": 4.4,
+    "reviews": 760,
+    "website": "https://runwayml.com",
+    "logo": "/images/logos/runway.png",
+    "featured": false,
+    "professional": true
+  }
+]
