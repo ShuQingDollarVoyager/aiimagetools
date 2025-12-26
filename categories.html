@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Image Tool Categories | AI Image Hub</title>
+    <meta name="description" content="Browse AI image tools by category. Find the perfect tool for art generation, background removal, image enhancement, and more.">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="AI Image Tool Categories | AI Image Hub">
+    <meta property="og:description" content="Browse AI tools by category - art generation, background removal, enhancement & more.">
+    <meta property="og:image" content="https://aiimagetools.io/images/og-image.svg">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://aiimagetools.io/images/twitter-card.svg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+    <!-- CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/custom.css">
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <a href="/">
+                            <i class="fas fa-palette text-purple-600 text-2xl mr-2"></i>
+                            <span class="text-xl font-bold text-gray-900">AI Image Hub</span>
+                        </a>
+                    </div>
+                    <div class="hidden sm:ml-8 sm:flex sm:space-x-8">
+                        <a href="/tools.html" class="text-gray-700 hover:text-purple-600 px-3 py-2 text-sm font-medium">Tools</a>
+                        <a href="/categories.html" class="text-purple-600 border-b-2 border-purple-600 px-3 py-2 text-sm font-medium">Categories</a>
+                        <a href="/comparisons.html" class="text-gray-700 hover:text-purple-600 px-3 py-2 text-sm font-medium">Comparisons</a>
+                        <a href="/blog.html" class="text-gray-700 hover:text-purple-600 px-3 py-2 text-sm font-medium">Blog</a>
+                    </div>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="flex items-center sm:hidden">
+                    <button id="mobileMenuBtn" class="text-gray-700 hover:text-purple-600 p-2">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobileMenu" class="hidden sm:hidden bg-white border-t">
+            <div class="px-4 py-2 space-y-1">
+                <a href="/tools.html" class="block px-3 py-2 text-gray-700 hover:text-purple-600">Tools</a>
+                <a href="/categories.html" class="block px-3 py-2 text-purple-600 font-medium">Categories</a>
+                <a href="/comparisons.html" class="block px-3 py-2 text-gray-700 hover:text-purple-600">Comparisons</a>
+                <a href="/blog.html" class="block px-3 py-2 text-gray-700 hover:text-purple-600">Blog</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <div class="bg-gradient-to-r from-purple-600 to-indigo-600 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl font-bold mb-4">Browse by Category</h1>
+            <p class="text-xl text-purple-100">Find the perfect AI image tool for your specific needs</p>
+        </div>
+    </div>
+
+    <!-- Categories Grid -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div id="categoriesContainer" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Loading skeleton -->
+            <div class="animate-pulse bg-white rounded-xl shadow-md p-6">
+                <div class="w-16 h-16 bg-gray-200 rounded-2xl mb-4"></div>
+                <div class="h-6 bg-gray-200 rounded w-32 mb-2"></div>
+                <div class="h-4 bg-gray-200 rounded w-full mb-4"></div>
+                <div class="h-4 bg-gray-200 rounded w-20"></div>
+            </div>
+            <div class="animate-pulse bg-white rounded-xl shadow-md p-6">
+                <div class="w-16 h-16 bg-gray-200 rounded-2xl mb-4"></div>
+                <div class="h-6 bg-gray-200 rounded w-32 mb-2"></div>
+                <div class="h-4 bg-gray-200 rounded w-full mb-4"></div>
+                <div class="h-4 bg-gray-200 rounded w-20"></div>
+            </div>
+            <div class="animate-pulse bg-white rounded-xl shadow-md p-6">
+                <div class="w-16 h-16 bg-gray-200 rounded-2xl mb-4"></div>
+                <div class="h-6 bg-gray-200 rounded w-32 mb-2"></div>
+                <div class="h-4 bg-gray-200 rounded w-full mb-4"></div>
+                <div class="h-4 bg-gray-200 rounded w-20"></div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-12 mt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center text-sm">
+                <p>&copy; 2024 AI Image Hub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+            document.getElementById('mobileMenu').classList.toggle('hidden');
+        });
+
+        // Category icons and gradients
+        const categoryStyles = {
+            'AI Art': { icon: 'fa-paint-brush', gradient: 'from-pink-500 to-purple-600' },
+            'Background': { icon: 'fa-cut', gradient: 'from-blue-500 to-cyan-600' },
+            'Enhance': { icon: 'fa-magic', gradient: 'from-green-500 to-teal-600' },
+            'Avatar': { icon: 'fa-user-circle', gradient: 'from-orange-500 to-red-600' },
+            'Design': { icon: 'fa-palette', gradient: 'from-purple-500 to-indigo-600' },
+            'Professional': { icon: 'fa-briefcase', gradient: 'from-gray-600 to-gray-800' }
+        };
+
+        // Load categories
+        async function loadCategories() {
+            try {
+                const response = await fetch('/data/tools.json');
+                const data = await response.json();
+                const tools = data.tools || [];
+                const categories = data.categories || [];
+
+                // Group tools by category
+                const categoryMap = {};
+                tools.forEach(tool => {
+                    const cat = tool.category;
+                    if (!categoryMap[cat]) {
+                        categoryMap[cat] = [];
+                    }
+                    categoryMap[cat].push(tool);
+                });
+
+                const container = document.getElementById('categoriesContainer');
+                container.innerHTML = categories.map(cat => {
+                    const catTools = categoryMap[cat.name] || [];
+                    const style = categoryStyles[cat.name] || { icon: 'fa-folder', gradient: 'from-gray-500 to-gray-700' };
+                    const topTools = catTools.sort((a, b) => (b.popularity || 0) - (a.popularity || 0)).slice(0, 4);
+                    const catSlug = cat.name.toLowerCase().replace(/\s+/g, '-');
+
+                    return `
+                        <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-xl transition-shadow">
+                            <div class="bg-gradient-to-br ${style.gradient} w-16 h-16 rounded-2xl flex items-center justify-center mb-4 shadow-lg">
+                                <i class="fas ${style.icon} text-white text-2xl"></i>
+                            </div>
+                            <h2 class="text-xl font-bold text-gray-900 mb-2">${cat.name}</h2>
+                            <p class="text-gray-600 text-sm mb-4">${cat.description}</p>
+                            <p class="text-purple-600 font-semibold mb-4">${catTools.length} tools</p>
+
+                            <div class="border-t pt-4">
+                                <p class="text-xs text-gray-500 mb-2">Top tools:</p>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    ${topTools.map(t => `
+                                        <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">${t.name}</span>
+                                    `).join('')}
+                                </div>
+                            </div>
+
+                            <a href="/tools.html?category=${encodeURIComponent(cat.name)}" class="block w-full bg-purple-600 text-white text-center py-2 rounded-lg font-medium hover:bg-purple-700 transition">
+                                View All ${cat.name} Tools
+                            </a>
+                        </div>
+                    `;
+                }).join('');
+            } catch (error) {
+                console.error('Error loading categories:', error);
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', loadCategories);
+    </script>
+</body>
+</html>

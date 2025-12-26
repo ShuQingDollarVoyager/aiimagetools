@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Your AI Tool | AI Image Hub</title>
+    <meta name="description" content="Submit your AI image tool to be featured on AI Image Hub directory.">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Submit Your AI Tool | AI Image Hub">
+    <meta property="og:description" content="Submit your AI image tool to be featured on our directory.">
+    <meta property="og:image" content="https://aiimagetools.io/images/og-image.svg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://aiimagetools.io/images/twitter-card.svg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="/" class="flex items-center">
+                        <i class="fas fa-palette text-purple-600 text-2xl mr-2"></i>
+                        <span class="text-xl font-bold text-gray-900">AI Image Hub</span>
+                    </a>
+                </div>
+                <div class="hidden sm:flex sm:items-center sm:space-x-8">
+                    <a href="/tools.html" class="text-gray-700 hover:text-purple-600 px-3 py-2 text-sm font-medium">Tools</a>
+                    <a href="/categories.html" class="text-gray-700 hover:text-purple-600 px-3 py-2 text-sm font-medium">Categories</a>
+                    <a href="/blog.html" class="text-gray-700 hover:text-purple-600 px-3 py-2 text-sm font-medium">Blog</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <div class="bg-gradient-to-r from-purple-600 to-indigo-600 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl font-bold mb-4">Submit Your AI Tool</h1>
+            <p class="text-xl text-purple-100">Get your AI image tool featured in our directory</p>
+        </div>
+    </div>
+
+    <!-- Content -->
+    <main class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <!-- Benefits -->
+        <div class="bg-white rounded-xl shadow-md p-6 mb-8">
+            <h2 class="text-xl font-bold text-gray-900 mb-4">Why Submit Your Tool?</h2>
+            <div class="grid md:grid-cols-3 gap-4">
+                <div class="text-center p-4">
+                    <i class="fas fa-eye text-purple-600 text-2xl mb-2"></i>
+                    <p class="text-sm text-gray-700">Increase visibility to thousands of potential users</p>
+                </div>
+                <div class="text-center p-4">
+                    <i class="fas fa-users text-purple-600 text-2xl mb-2"></i>
+                    <p class="text-sm text-gray-700">Connect with creators and professionals</p>
+                </div>
+                <div class="text-center p-4">
+                    <i class="fas fa-chart-line text-purple-600 text-2xl mb-2"></i>
+                    <p class="text-sm text-gray-700">Grow your user base organically</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Submission Form -->
+        <div class="bg-white rounded-xl shadow-md p-8">
+            <h2 class="text-xl font-bold text-gray-900 mb-6">Tool Information</h2>
+            <form id="submitForm" class="space-y-6">
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Tool Name *</label>
+                        <input type="text" required class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-purple-500" placeholder="e.g., My AI Tool">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Website URL *</label>
+                        <input type="url" required class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-purple-500" placeholder="https://...">
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Category *</label>
+                    <select required class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-purple-500">
+                        <option value="">Select a category</option>
+                        <option value="AI Art">AI Art</option>
+                        <option value="Background">Background Removal</option>
+                        <option value="Enhance">Image Enhancement</option>
+                        <option value="Avatar">Avatar Generation</option>
+                        <option value="Design">Design Tools</option>
+                        <option value="Professional">Professional Tools</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Short Description *</label>
+                    <textarea rows="3" required class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-purple-500" placeholder="Describe your tool in 1-2 sentences..."></textarea>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Pricing Model *</label>
+                    <select required class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-purple-500">
+                        <option value="">Select pricing model</option>
+                        <option value="free">Free</option>
+                        <option value="freemium">Freemium</option>
+                        <option value="paid">Paid</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Tags (comma separated)</label>
+                    <input type="text" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-purple-500" placeholder="e.g., AI, Image Generation, Creative">
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Your Name *</label>
+                        <input type="text" required class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-purple-500">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Your Email *</label>
+                        <input type="email" required class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-purple-500">
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Additional Notes</label>
+                    <textarea rows="3" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-purple-500" placeholder="Any additional information about your tool..."></textarea>
+                </div>
+
+                <div class="flex items-start">
+                    <input type="checkbox" required class="mt-1 mr-2">
+                    <label class="text-sm text-gray-700">
+                        I confirm that I have the right to submit this tool and agree to the <a href="/terms.html" class="text-purple-600 hover:underline">Terms of Service</a>
+                    </label>
+                </div>
+
+                <button type="submit" class="w-full bg-purple-600 text-white py-3 rounded-lg font-medium hover:bg-purple-700 transition">
+                    Submit Tool for Review
+                </button>
+            </form>
+
+            <p class="text-sm text-gray-500 mt-4 text-center">
+                We review all submissions within 3-5 business days.
+            </p>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-12 mt-16">
+        <div class="max-w-7xl mx-auto px-4 text-center text-sm">
+            <p>&copy; 2024 AI Image Hub. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('submitForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your submission! We will review your tool and get back to you within 3-5 business days.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>

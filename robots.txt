@@ -1,0 +1,9 @@
+# AI Image Tools Hub - robots.txt
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://aiimagetools.io/sitemap.xml
+
+# Disallow API endpoints
+Disallow: /api/

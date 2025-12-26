@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All AI Image Tools - Browse 30+ Tools | AI Image Hub</title>
+    <meta name="description" content="Browse our complete collection of 30+ AI image tools. Filter by category, pricing, and features to find the perfect tool for your needs.">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="All AI Image Tools | AI Image Hub">
+    <meta property="og:description" content="Browse 30+ AI image tools. Filter by category and pricing.">
+    <meta property="og:image" content="https://aiimagetools.io/images/og-image.svg">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://aiimagetools.io/images/twitter-card.svg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+    <!-- CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/custom.css">
+    
+    <style>
+        .filter-sidebar {
+            height: calc(100vh - 80px);
+            overflow-y: auto;
+        }
+        .tools-grid {
+            height: calc(100vh - 80px);
+            overflow-y: auto;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation (复用首页的导航) -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <a href="/">
+                            <i class="fas fa-palette text-purple-600 text-2xl mr-2"></i>
+                            <span class="text-xl font-bold text-gray-900">AI Image Hub</span>
+                        </a>
+                    </div>
+                    <div class="hidden sm:ml-8 sm:flex sm:space-x-8">
+                        <a href="/tools.html" class="text-purple-600 border-b-2 border-purple-600 px-3 py-2 text-sm font-medium">Tools</a>
+                        <a href="/categories" class="text-gray-700 hover:text-purple-600 px-3 py-2 text-sm font-medium">Categories</a>
+                        <a href="/comparisons" class="text-gray-700 hover:text-purple-600 px-3 py-2 text-sm font-medium">Comparisons</a>
+                        <a href="/blog" class="text-gray-700 hover:text-purple-600 px-3 py-2 text-sm font-medium">Blog</a>
+                    </div>
+                </div>
+                <div class="hidden sm:flex items-center space-x-4">
+                    <button class="text-gray-700 hover:text-purple-600">
+                        <i class="fas fa-search"></i>
+                    </button>
+                    <a href="/submit.html" class="bg-purple-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-purple-700 transition">
+                        Submit Tool
+                    </a>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="flex items-center sm:hidden">
+                    <button id="mobileMenuBtn" class="text-gray-700 hover:text-purple-600 p-2">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobileMenu" class="hidden sm:hidden bg-white border-t">
+            <div class="px-4 py-2 space-y-1">
+                <a href="/tools.html" class="block px-3 py-2 text-purple-600 font-medium">Tools</a>
+                <a href="/categories.html" class="block px-3 py-2 text-gray-700 hover:text-purple-600">Categories</a>
+                <a href="/comparisons.html" class="block px-3 py-2 text-gray-700 hover:text-purple-600">Comparisons</a>
+                <a href="/blog.html" class="block px-3 py-2 text-gray-700 hover:text-purple-600">Blog</a>
+                <a href="/submit.html" class="block px-3 py-2 text-purple-600 font-medium">Submit Tool</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="flex">
+        <!-- Filter Sidebar -->
+        <aside class="w-64 bg-white border-r filter-sidebar p-6">
+            <div class="mb-6">
+                <h3 class="font-semibold text-gray-900 mb-4">Filters</h3>
+                
+                <!-- Search within tools -->
+                <div class="mb-6">
+                    <input type="text" 
+                           id="toolSearch"
+                           placeholder="Search tools..." 
+                           class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:border-purple-500">
+                </div>
+
+                <!-- Category Filter -->
+                <div class="mb-6">
+                    <h4 class="font-medium text-gray-700 mb-3">Category</h4>
+                    <div class="space-y-2">
+                        <label class="flex items-center">
+                            <input type="checkbox" value="ai-art" class="category-filter mr-2">
+                            <span class="text-sm">AI Art (8)</span>
+                        </label>
+                        <label class="flex items-center">
+                            <input type="checkbox" value="background" class="category-filter mr-2">
+                            <span class="text-sm">Background (5)</span>
+                        </label>
+                        <label class="flex items-center">
+                            <input type="checkbox" value="enhance" class="category-filter mr-2">
+                            <span class="text-sm">Enhance (7)</span>
+                        </label>
+                        <label class="flex items-center">
+                            <input type="checkbox" value="avatar" class="category-filter mr-2">
+                            <span class="text-sm">Avatar (1)</span>
+                        </label>
+                        <label class="flex items-center">
+                            <input type="checkbox" value="design" class="category-filter mr-2">
+                            <span class="text-sm">Design (6)</span>
+                        </label>
+                        <label class="flex items-center">
+                            <input type="checkbox" value="professional" class="category-filter mr-2">
+                            <span class="text-sm">Professional (3)</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Pricing Filter -->
+                <div class="mb-6">
+                    <h4 class="font-medium text-gray-700 mb-3">Pricing</h4>
+                    <div class="space-y-2">
+                        <label class="flex items-center">
+                            <input type="checkbox" value="free" class="pricing-filter mr-2">
+                            <span class="text-sm">Free</span>
+                        </label>
+                        <label class="flex items-center">
+                            <input type="checkbox" value="freemium" class="pricing-filter mr-2">
+                            <span class="text-sm">Freemium</span>
+                        </label>
+                        <label class="flex items-center">
+                            <input type="checkbox" value="subscription" class="pricing-filter mr-2">
+                            <span class="text-sm">Subscription</span>
+                        </label>
+                        <label class="flex items-center">
+                            <input type="checkbox" value="one-time" class="pricing-filter mr-2">
+                            <span class="text-sm">One-time Purchase</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Rating Filter -->
+                <div class="mb-6">
+                    <h4 class="font-medium text-gray-700 mb-3">Minimum Rating</h4>
+                    <select id="ratingFilter" class="w-full px-3 py-2 border rounded-lg">
+                        <option value="0">All Ratings</option>
+                        <option value="4">4+ Stars</option>
+                        <option value="4.5">4.5+ Stars</option>
+                    </select>
+                </div>
+
+                <!-- Sort Options -->
+                <div class="mb-6">
+                    <h4 class="font-medium text-gray-700 mb-3">Sort By</h4>
+                    <select id="sortBy" class="w-full px-3 py-2 border rounded-lg">
+                        <option value="featured">Featured</option>
+                        <option value="popular">Most Popular</option>
+                        <option value="rating">Highest Rated</option>
+                        <option value="newest">Newest</option>
+                        <option value="price-low">Price: Low to High</option>
+                        <option value="price-high">Price: High to Low</option>
+                    </select>
+                </div>
+
+                <button id="clearFilters" class="w-full bg-gray-200 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-300 transition">
+                    Clear All Filters
+                </button>
+            </div>
+        </aside>
+
+        <!-- Tools Grid -->
+        <main class="flex-1 tools-grid p-6">
+            <!-- Results Header -->
+            <div class="mb-6">
+                <div class="flex justify-between items-center">
+                    <div>
+                        <h1 class="text-2xl font-bold text-gray-900">All AI Image Tools</h1>
+                        <p class="text-gray-600 mt-1">
+                            Showing <span id="resultCount">0</span> of 30 tools
+                        </p>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <!-- View Toggle -->
+                        <div class="flex bg-gray-100 rounded-lg p-1">
+                            <button id="gridView" class="px-3 py-1 bg-white rounded text-gray-700">
+                                <i class="fas fa-th"></i>
+                            </button>
+                            <button id="listView" class="px-3 py-1 text-gray-500">
+                                <i class="fas fa-list"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tools Container -->
+            <div id="toolsContainer" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Tools will be dynamically loaded here -->
+            </div>
+
+            <!-- Load More Button -->
+            <div class="text-center mt-8">
+                <button id="loadMore" class="bg-purple-600 text-white px-6 py-3 rounded-lg hover:bg-purple-700 transition">
+                    Load More Tools
+                </button>
+            </div>
+        </main>
+    </div>
+
+    <!-- Tool Template (hidden, for JavaScript cloning) -->
+    <template id="toolCardTemplate">
+        <article class="tool-card bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow">
+            <div class="p-6">
+                <div class="flex items-start justify-between mb-4">
+                    <div class="flex items-center">
+                        <img class="tool-logo w-12 h-12 rounded-lg">
+                        <div class="ml-3">
+                            <h3 class="tool-name font-semibold text-gray-900"></h3>
+                            <div class="flex items-center mt-1">
+                                <div class="tool-rating flex text-yellow-400"></div>
+                                <span class="tool-reviews text-xs text-gray-500 ml-2"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <span class="tool-badge"></span>
+                </div>
+                <p class="tool-description text-gray-600 text-sm mb-4"></p>
+                <div class="tool-tags flex flex-wrap gap-2 mb-4"></div>
+                <div class="flex items-center justify-between">
+                    <span class="tool-price text-gray-900 font-semibold"></span>
+                    <a class="tool-link text-purple-600 hover:text-purple-700 font-medium text-sm">
+                        Learn More <i class="fas fa-arrow-right ml-1"></i>
+                    </a>
+                </div>
+            </div>
+        </article>
+    </template>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script>
+    // Mobile menu toggle
+    document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+        document.getElementById('mobileMenu').classList.toggle('hidden');
+    });
+
+  document.addEventListener('DOMContentLoaded', function() {
+    let allTools = [];
+    let filteredTools = [];
+    let displayedCount = 9;
+    
+    // Load tools data
+    async function loadTools() {
+        try {
+            const response = await fetch('/data/tools.json');
+            const data = await response.json();
+
+            allTools = data.tools || [];
+            filteredTools = [...allTools];
+
+            console.log('Loaded tools:', allTools.length);
+            displayTools(true);
+            return true;
+        } catch (error) {
+            console.error('Error loading tools:', error);
+            return false;
+        }
+    }
+
+    // Display tools
+    function displayTools(reset = false) {
+        const container = document.getElementById('toolsContainer');
+        const template = document.getElementById('toolCardTemplate');
+        
+        if (!container || !template) {
+            console.error('找不到容器或模板元素');
+            return;
+        }
+        
+        if (reset) {
+            container.innerHTML = '';
+            displayedCount = 9;
+        }
+        
+        const toolsToShow = filteredTools.slice(0, displayedCount);
+        
+        toolsToShow.forEach((tool, index) => {
+            if (reset || index >= displayedCount - 9) {
+                const clone = template.content.cloneNode(true);
+                
+                // Populate tool data
+                const logo = clone.querySelector('.tool-logo');
+                logo.src = tool.logo || '/images/logos/default.png';
+                logo.alt = `${tool.name} logo`;
+                logo.onerror = function() {
+                    this.src = 'https://via.placeholder.com/48?text=' + tool.name.charAt(0);
+                };
+                
+                clone.querySelector('.tool-name').textContent = tool.name;
+                clone.querySelector('.tool-description').textContent = tool.description;
+                
+                // Rating
+                const ratingHtml = renderRatingStars(tool.rating);
+                clone.querySelector('.tool-rating').innerHTML = ratingHtml;
+                clone.querySelector('.tool-reviews').textContent = `(${formatNumber(tool.reviews)} reviews)`;
+                
+                // 🔧 修复2: Badge 显示逻辑
+                const badge = clone.querySelector('.tool-badge');
+                if (tool.featured) {
+                    badge.className = 'bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full';
+                    badge.textContent = 'Featured';
+                } else if (tool.popularity > 90) {
+                    badge.className = 'bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full';
+                    badge.textContent = 'Popular';
+                } else if (tool.pricing === 'free') {
+                    badge.className = 'bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full';
+                    badge.textContent = 'Free';
+                } else {
+                    badge.style.display = 'none';
+                }
+                
+                // Tags
+                const tagsContainer = clone.querySelector('.tool-tags');
+                if (tool.tags && Array.isArray(tool.tags)) {
+                    tool.tags.slice(0, 3).forEach(tag => {
+                        const tagEl = document.createElement('span');
+                        tagEl.className = 'bg-gray-100 text-gray-700 text-xs px-3 py-1 rounded-full';
+                        tagEl.textContent = tag;
+                        tagsContainer.appendChild(tagEl);
+                    });
+                }
+                
+                // 🔧 修复3: 价格显示逻辑 - 适配简单字符串格式
+                const priceEl = clone.querySelector('.tool-price');
+                priceEl.textContent = formatPrice(tool.pricing);
+                
+                // Link
+                const link = clone.querySelector('.tool-link');
+                link.href = tool.url || '#';
+                link.target = '_blank';
+                
+                container.appendChild(clone);
+            }
+        });
+        
+        // Update result count
+        document.getElementById('resultCount').textContent = toolsToShow.length;
+        
+        // Show/hide load more button
+        const loadMoreBtn = document.getElementById('loadMore');
+        if (displayedCount >= filteredTools.length) {
+            loadMoreBtn.style.display = 'none';
+        } else {
+            loadMoreBtn.style.display = 'inline-block';
+        }
+    }
+
+    // 🔧 修复4: 简化价格格式化 - 适配 "free"/"freemium"/"paid" 字符串
+    function formatPrice(pricing) {
+        if (typeof pricing === 'string') {
+            switch(pricing.toLowerCase()) {
+                case 'free':
+                    return 'Free';
+                case 'freemium':
+                    return 'Free - $9/monthly';
+                case 'paid':
+                    return 'From $10/monthly';
+                default:
+                    return 'Contact for pricing';
+            }
+        }
+        return 'Contact for pricing';
+    }
+
+    // Format number
+    function formatNumber(num) {
+        if (num >= 1000) {
+            return (num / 1000).toFixed(1) + 'k';
+        }
+        return num.toString();
+    }
+
+    // Render rating stars
+    function renderRatingStars(rating) {
+        const fullStars = Math.floor(rating);
+        const hasHalfStar = rating % 1 >= 0.5;
+        let html = '';
+        
+        for (let i = 0; i < fullStars; i++) {
+            html += '<i class="fas fa-star text-sm"></i>';
+        }
+        if (hasHalfStar) {
+            html += '<i class="fas fa-star-half-alt text-sm"></i>';
+        }
+        const emptyStars = 5 - fullStars - (hasHalfStar ? 1 : 0);
+        for (let i = 0; i < emptyStars; i++) {
+            html += '<i class="far fa-star text-sm"></i>';
+        }
+        return html;
+    }
+
+    // Apply filters
+    function applyFilters() {
+        const selectedCategories = Array.from(document.querySelectorAll('.category-filter:checked')).map(cb => cb.value);
+        const selectedPricing = Array.from(document.querySelectorAll('.pricing-filter:checked')).map(cb => cb.value);
+        const minRating = parseFloat(document.getElementById('ratingFilter').value);
+        const searchTerm = document.getElementById('toolSearch').value.toLowerCase();
+        const sortBy = document.getElementById('sortBy').value;
+        
+        // Filter tools
+        filteredTools = allTools.filter(tool => {
+            // Category filter - 🔧 修复5: 使用实际的 category 字段
+            if (selectedCategories.length > 0) {
+                const toolCategory = tool.category.toLowerCase().replace(/\s+/g, '-');
+                if (!selectedCategories.includes(toolCategory)) {
+                    return false;
+                }
+            }
+            
+            // Pricing filter - 🔧 修复6: 适配字符串格式
+            if (selectedPricing.length > 0) {
+                const pricingType = typeof tool.pricing === 'string' ? 
+                    tool.pricing.toLowerCase() : '';
+                if (!selectedPricing.includes(pricingType)) {
+                    return false;
+                }
+            }
+            
+            // Rating filter
+            if (tool.rating < minRating) {
+                return false;
+            }
+            
+            // Search filter
+            if (searchTerm) {
+                const nameMatch = tool.name.toLowerCase().includes(searchTerm);
+                const descMatch = tool.description.toLowerCase().includes(searchTerm);
+                const tagMatch = tool.tags.some(tag => 
+                    tag.toLowerCase().includes(searchTerm)
+                );
+                if (!nameMatch && !descMatch && !tagMatch) {
+                    return false;
+                }
+            }
+            
+            return true;
+        });
+        
+        // Sort tools - 🔧 修复7: 使用实际字段
+        filteredTools.sort((a, b) => {
+            switch(sortBy) {
+                case 'popular':
+                    return (b.popularity || 0) - (a.popularity || 0);
+                case 'rating':
+                    return b.rating - a.rating;
+                case 'newest':
+                    return b.id - a.id;
+                default: // featured
+                    return (b.featured ? 1 : 0) - (a.featured ? 1 : 0);
+            }
+        });
+        
+        displayTools(true);
+    }
+
+    // Event listeners
+    document.querySelectorAll('.category-filter, .pricing-filter').forEach(checkbox => {
+        checkbox.addEventListener('change', applyFilters);
+    });
+    
+    document.getElementById('ratingFilter').addEventListener('change', applyFilters);
+    document.getElementById('sortBy').addEventListener('change', applyFilters);
+    document.getElementById('toolSearch').addEventListener('input', applyFilters);
+    
+    document.getElementById('clearFilters').addEventListener('click', function() {
+        document.querySelectorAll('input[type="checkbox"]').forEach(cb => cb.checked = false);
+        document.getElementById('ratingFilter').value = '0';
+        document.getElementById('sortBy').value = 'featured';
+        document.getElementById('toolSearch').value = '';
+        filteredTools = [...allTools];
+        displayTools(true);
+    });
+    
+    document.getElementById('loadMore').addEventListener('click', function() {
+        displayedCount += 9;
+        displayTools();
+    });
+    
+    // View toggle
+    document.getElementById('gridView').addEventListener('click', function() {
+        this.classList.add('bg-white', 'text-gray-700');
+        this.classList.remove('text-gray-500');
+        document.getElementById('listView').classList.remove('bg-white', 'text-gray-700');
+        document.getElementById('listView').classList.add('text-gray-500');
+        document.getElementById('toolsContainer').className = 'grid md:grid-cols-2 lg:grid-cols-3 gap-6';
+    });
+    
+    document.getElementById('listView').addEventListener('click', function() {
+        this.classList.add('bg-white', 'text-gray-700');
+        this.classList.remove('text-gray-500');
+        document.getElementById('gridView').classList.remove('bg-white', 'text-gray-700');
+        document.getElementById('gridView').classList.add('text-gray-500');
+        document.getElementById('toolsContainer').className = 'grid grid-cols-1 gap-4';
+    });
+    
+    // Check URL for search and category parameters
+    function checkUrlParams() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const searchQuery = urlParams.get('q');
+        const categoryQuery = urlParams.get('category');
+        let hasParams = false;
+
+        if (searchQuery) {
+            document.getElementById('toolSearch').value = searchQuery;
+            hasParams = true;
+        }
+
+        if (categoryQuery) {
+            // Find and check the matching category checkbox
+            const categorySlug = categoryQuery.toLowerCase().replace(/\s+/g, '-');
+            document.querySelectorAll('.category-filter').forEach(cb => {
+                if (cb.value === categorySlug || cb.value === categoryQuery.toLowerCase()) {
+                    cb.checked = true;
+                    hasParams = true;
+                }
+            });
+        }
+
+        return hasParams;
+    }
+
+    // Initial load
+    const hasParams = checkUrlParams();
+    loadTools().then(() => {
+        if (hasParams) {
+            applyFilters();
+        }
+    });
+});
+    </script>
+</body>
+</html>

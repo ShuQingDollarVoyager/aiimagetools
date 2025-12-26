@@ -1,4 +1,5 @@
 /* AI Image Tools - Custom Styles */
+/* Browser Support: Chrome 66+, Firefox 61+, Safari 12+, Edge 79+ */
 
 /* 自定义动画 */
 @keyframes fadeIn {
@@ -90,6 +91,8 @@
 
 /* 评分星星 */
 .rating {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
   gap: 2px;
 }
@@ -126,11 +129,16 @@
 
 /* 响应式导航菜单 */
 .mobile-menu {
+  -webkit-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
   transform: translateX(-100%);
+  -webkit-transition: transform 0.3s ease;
   transition: transform 0.3s ease;
 }
 
 .mobile-menu.active {
+  -webkit-transform: translateX(0);
+  -ms-transform: translateX(0);
   transform: translateX(0);
 }
 

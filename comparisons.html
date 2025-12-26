@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compare AI Image Tools | AI Image Hub</title>
+    <meta name="description" content="Compare AI image tools side by side. Find the best tool for your needs by comparing features, pricing, and ratings.">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Compare AI Image Tools | AI Image Hub">
+    <meta property="og:description" content="Compare AI image tools side by side - features, pricing, and ratings.">
+    <meta property="og:image" content="https://aiimagetools.io/images/og-image.svg">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://aiimagetools.io/images/twitter-card.svg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+    <!-- CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/custom.css">
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <a href="/">
+                            <i class="fas fa-palette text-purple-600 text-2xl mr-2"></i>
+                            <span class="text-xl font-bold text-gray-900">AI Image Hub</span>
+                        </a>
+                    </div>
+                    <div class="hidden sm:ml-8 sm:flex sm:space-x-8">
+                        <a href="/tools.html" class="text-gray-700 hover:text-purple-600 px-3 py-2 text-sm font-medium">Tools</a>
+                        <a href="/categories.html" class="text-gray-700 hover:text-purple-600 px-3 py-2 text-sm font-medium">Categories</a>
+                        <a href="/comparisons.html" class="text-purple-600 border-b-2 border-purple-600 px-3 py-2 text-sm font-medium">Comparisons</a>
+                        <a href="/blog.html" class="text-gray-700 hover:text-purple-600 px-3 py-2 text-sm font-medium">Blog</a>
+                    </div>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="flex items-center sm:hidden">
+                    <button id="mobileMenuBtn" class="text-gray-700 hover:text-purple-600 p-2">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobileMenu" class="hidden sm:hidden bg-white border-t">
+            <div class="px-4 py-2 space-y-1">
+                <a href="/tools.html" class="block px-3 py-2 text-gray-700 hover:text-purple-600">Tools</a>
+                <a href="/categories.html" class="block px-3 py-2 text-gray-700 hover:text-purple-600">Categories</a>
+                <a href="/comparisons.html" class="block px-3 py-2 text-purple-600 font-medium">Comparisons</a>
+                <a href="/blog.html" class="block px-3 py-2 text-gray-700 hover:text-purple-600">Blog</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <div class="bg-gradient-to-r from-purple-600 to-indigo-600 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl font-bold mb-4">Compare AI Image Tools</h1>
+            <p class="text-xl text-purple-100">Select tools to compare features, pricing, and ratings side by side</p>
+        </div>
+    </div>
+
+    <!-- Tool Selection -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <!-- Selection Area -->
+        <div class="bg-white rounded-xl shadow-md p-6 mb-8">
+            <h2 class="text-xl font-bold text-gray-900 mb-4">Select Tools to Compare (up to 4)</h2>
+            <div class="grid md:grid-cols-4 gap-4 mb-4">
+                <select id="tool1" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-purple-500">
+                    <option value="">Select Tool 1</option>
+                </select>
+                <select id="tool2" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-purple-500">
+                    <option value="">Select Tool 2</option>
+                </select>
+                <select id="tool3" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-purple-500">
+                    <option value="">Select Tool 3</option>
+                </select>
+                <select id="tool4" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-purple-500">
+                    <option value="">Select Tool 4</option>
+                </select>
+            </div>
+            <button id="compareBtn" class="bg-purple-600 text-white px-6 py-2 rounded-lg font-medium hover:bg-purple-700 transition">
+                Compare Selected Tools
+            </button>
+        </div>
+
+        <!-- Comparison Table -->
+        <div id="comparisonContainer" class="hidden">
+            <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                <div class="overflow-x-auto">
+                    <table class="w-full">
+                        <thead class="bg-gray-50">
+                            <tr id="toolHeaders">
+                                <th class="px-6 py-4 text-left text-sm font-semibold text-gray-900 w-40">Feature</th>
+                            </tr>
+                        </thead>
+                        <tbody id="comparisonBody" class="divide-y divide-gray-200">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- Popular Comparisons -->
+        <div class="mt-12">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">Popular Comparisons</h2>
+            <div id="popularComparisons" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Will be populated dynamically -->
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-12 mt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center text-sm">
+                <p>&copy; 2024 AI Image Hub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+            document.getElementById('mobileMenu').classList.toggle('hidden');
+        });
+
+        let allTools = [];
+
+        // Load tools data
+        async function loadTools() {
+            try {
+                const response = await fetch('/data/tools.json');
+                const data = await response.json();
+                allTools = data.tools || [];
+
+                // Populate select dropdowns
+                const selects = ['tool1', 'tool2', 'tool3', 'tool4'];
+                selects.forEach(id => {
+                    const select = document.getElementById(id);
+                    allTools.forEach(tool => {
+                        const option = document.createElement('option');
+                        option.value = tool.id;
+                        option.textContent = tool.name;
+                        select.appendChild(option);
+                    });
+                });
+
+                // Load popular comparisons
+                loadPopularComparisons();
+            } catch (error) {
+                console.error('Error loading tools:', error);
+            }
+        }
+
+        // Load popular comparisons
+        function loadPopularComparisons() {
+            const popularPairs = [
+                { tools: [1, 2], title: 'Midjourney vs DALL-E 3' },
+                { tools: [1, 3], title: 'Midjourney vs Stable Diffusion' },
+                { tools: [9, 10], title: 'Remove.bg vs PhotoRoom' },
+                { tools: [13, 14], title: 'Topaz Photo AI vs Upscayl' },
+                { tools: [21, 22], title: 'Canva AI vs Figma AI' },
+                { tools: [24, 25], title: 'Photoshop AI vs Runway ML' }
+            ];
+
+            const container = document.getElementById('popularComparisons');
+            container.innerHTML = popularPairs.map(pair => {
+                const tool1 = allTools.find(t => t.id === pair.tools[0]);
+                const tool2 = allTools.find(t => t.id === pair.tools[1]);
+                if (!tool1 || !tool2) return '';
+
+                return `
+                    <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition cursor-pointer" onclick="quickCompare(${pair.tools[0]}, ${pair.tools[1]})">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center">
+                                <img src="/${tool1.logo}" alt="${tool1.name}" class="w-10 h-10 rounded-lg" onerror="this.src='https://via.placeholder.com/40?text=${tool1.name.charAt(0)}'">
+                                <span class="mx-3 text-gray-400">vs</span>
+                                <img src="/${tool2.logo}" alt="${tool2.name}" class="w-10 h-10 rounded-lg" onerror="this.src='https://via.placeholder.com/40?text=${tool2.name.charAt(0)}'">
+                            </div>
+                            <i class="fas fa-arrow-right text-purple-600"></i>
+                        </div>
+                        <h3 class="font-semibold text-gray-900">${pair.title}</h3>
+                        <p class="text-sm text-gray-500 mt-1">${tool1.category}</p>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        // Quick compare from popular comparisons
+        function quickCompare(id1, id2) {
+            document.getElementById('tool1').value = id1;
+            document.getElementById('tool2').value = id2;
+            document.getElementById('tool3').value = '';
+            document.getElementById('tool4').value = '';
+            runComparison();
+        }
+
+        // Format pricing
+        function formatPricing(pricing) {
+            switch(pricing) {
+                case 'free': return 'Free';
+                case 'freemium': return 'Freemium';
+                case 'paid': return 'Paid';
+                default: return pricing;
+            }
+        }
+
+        // Run comparison
+        function runComparison() {
+            const selectedIds = ['tool1', 'tool2', 'tool3', 'tool4']
+                .map(id => document.getElementById(id).value)
+                .filter(v => v);
+
+            if (selectedIds.length < 2) {
+                alert('Please select at least 2 tools to compare');
+                return;
+            }
+
+            const selectedTools = selectedIds.map(id => allTools.find(t => t.id === parseInt(id)));
+
+            // Build comparison table
+            const headerRow = document.getElementById('toolHeaders');
+            headerRow.innerHTML = '<th class="px-6 py-4 text-left text-sm font-semibold text-gray-900 w-40">Feature</th>';
+            selectedTools.forEach(tool => {
+                headerRow.innerHTML += `
+                    <th class="px-6 py-4 text-center">
+                        <img src="/${tool.logo}" alt="${tool.name}" class="w-12 h-12 rounded-lg mx-auto mb-2" onerror="this.src='https://via.placeholder.com/48?text=${tool.name.charAt(0)}'">
+                        <div class="font-semibold text-gray-900">${tool.name}</div>
+                    </th>
+                `;
+            });
+
+            const tbody = document.getElementById('comparisonBody');
+            tbody.innerHTML = '';
+
+            // Comparison rows
+            const rows = [
+                { label: 'Category', key: 'category' },
+                { label: 'Rating', key: 'rating', format: v => `${v}/5` },
+                { label: 'Reviews', key: 'reviews', format: v => v >= 1000 ? (v/1000).toFixed(1) + 'k' : v },
+                { label: 'Pricing', key: 'pricing', format: formatPricing },
+                { label: 'Website', key: 'url', format: (v, tool) => `<a href="${v}" target="_blank" class="text-purple-600 hover:underline">Visit</a>` }
+            ];
+
+            rows.forEach(row => {
+                let tr = document.createElement('tr');
+                tr.innerHTML = `<td class="px-6 py-4 text-sm font-medium text-gray-900">${row.label}</td>`;
+                selectedTools.forEach(tool => {
+                    let value = tool[row.key];
+                    if (row.format) {
+                        value = row.format(value, tool);
+                    }
+                    tr.innerHTML += `<td class="px-6 py-4 text-sm text-gray-700 text-center">${value}</td>`;
+                });
+                tbody.appendChild(tr);
+            });
+
+            // Tags row
+            let tagsRow = document.createElement('tr');
+            tagsRow.innerHTML = `<td class="px-6 py-4 text-sm font-medium text-gray-900">Tags</td>`;
+            selectedTools.forEach(tool => {
+                tagsRow.innerHTML += `
+                    <td class="px-6 py-4 text-center">
+                        <div class="flex flex-wrap justify-center gap-1">
+                            ${tool.tags.slice(0, 3).map(tag => `<span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">${tag}</span>`).join('')}
+                        </div>
+                    </td>
+                `;
+            });
+            tbody.appendChild(tagsRow);
+
+            document.getElementById('comparisonContainer').classList.remove('hidden');
+            document.getElementById('comparisonContainer').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Compare button click
+        document.getElementById('compareBtn').addEventListener('click', runComparison);
+
+        // Load on page ready
+        document.addEventListener('DOMContentLoaded', loadTools);
+    </script>
+</body>
+</html>
