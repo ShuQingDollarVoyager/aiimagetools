@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Image Tools Blog | AI Image Hub</title>
+    <meta name="description" content="Stay updated with the latest news, tutorials, and insights about AI image tools and creative technology.">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="AI Image Tools Blog | AI Image Hub">
+    <meta property="og:description" content="Latest news, tutorials, and insights about AI image tools.">
+    <meta property="og:image" content="https://aiimagetools.io/images/og-image.svg">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://aiimagetools.io/images/twitter-card.svg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+    <!-- CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/custom.css">
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <a href="/">
+                            <i class="fas fa-palette text-purple-600 text-2xl mr-2"></i>
+                            <span class="text-xl font-bold text-gray-900">AI Image Hub</span>
+                        </a>
+                    </div>
+                    <div class="hidden sm:ml-8 sm:flex sm:space-x-8">
+                        <a href="/tools.html" class="text-gray-700 hover:text-purple-600 px-3 py-2 text-sm font-medium">Tools</a>
+                        <a href="/categories.html" class="text-gray-700 hover:text-purple-600 px-3 py-2 text-sm font-medium">Categories</a>
+                        <a href="/comparisons.html" class="text-gray-700 hover:text-purple-600 px-3 py-2 text-sm font-medium">Comparisons</a>
+                        <a href="/blog.html" class="text-purple-600 border-b-2 border-purple-600 px-3 py-2 text-sm font-medium">Blog</a>
+                    </div>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="flex items-center sm:hidden">
+                    <button id="mobileMenuBtn" class="text-gray-700 hover:text-purple-600 p-2">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobileMenu" class="hidden sm:hidden bg-white border-t">
+            <div class="px-4 py-2 space-y-1">
+                <a href="/tools.html" class="block px-3 py-2 text-gray-700 hover:text-purple-600">Tools</a>
+                <a href="/categories.html" class="block px-3 py-2 text-gray-700 hover:text-purple-600">Categories</a>
+                <a href="/comparisons.html" class="block px-3 py-2 text-gray-700 hover:text-purple-600">Comparisons</a>
+                <a href="/blog.html" class="block px-3 py-2 text-purple-600 font-medium">Blog</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <div class="bg-gradient-to-r from-purple-600 to-indigo-600 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl font-bold mb-4">AI Image Tools Blog</h1>
+            <p class="text-xl text-purple-100">News, tutorials, and insights about AI image generation</p>
+        </div>
+    </div>
+
+    <!-- Blog Content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="grid lg:grid-cols-3 gap-8">
+            <!-- Main Content -->
+            <div class="lg:col-span-2">
+                <!-- Featured Post -->
+                <article class="bg-white rounded-xl shadow-md overflow-hidden mb-8">
+                    <div class="bg-gradient-to-r from-purple-500 to-indigo-500 h-48 flex items-center justify-center">
+                        <i class="fas fa-newspaper text-white text-6xl opacity-50"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 mb-3">
+                            <span class="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded">Featured</span>
+                            <span class="text-gray-500 text-sm">December 2024</span>
+                        </div>
+                        <h2 class="text-2xl font-bold text-gray-900 mb-3">The State of AI Image Generation in 2024</h2>
+                        <p class="text-gray-600 mb-4">
+                            A comprehensive look at how AI image generation has evolved this year, from Midjourney V6 to DALL-E 3, and what to expect in 2025.
+                        </p>
+                        <a href="#" class="text-purple-600 hover:text-purple-700 font-medium">
+                            Read More <i class="fas fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Blog Posts Grid -->
+                <div class="grid md:grid-cols-2 gap-6">
+                    <article class="bg-white rounded-xl shadow-md overflow-hidden">
+                        <div class="bg-gradient-to-r from-pink-400 to-purple-400 h-32 flex items-center justify-center">
+                            <i class="fas fa-lightbulb text-white text-4xl opacity-50"></i>
+                        </div>
+                        <div class="p-5">
+                            <span class="text-gray-500 text-sm">Tutorial</span>
+                            <h3 class="text-lg font-semibold text-gray-900 mt-1 mb-2">Getting Started with Stable Diffusion</h3>
+                            <p class="text-gray-600 text-sm mb-3">Learn how to set up and use Stable Diffusion locally on your computer.</p>
+                            <a href="#" class="text-purple-600 hover:text-purple-700 text-sm font-medium">Read More</a>
+                        </div>
+                    </article>
+
+                    <article class="bg-white rounded-xl shadow-md overflow-hidden">
+                        <div class="bg-gradient-to-r from-blue-400 to-cyan-400 h-32 flex items-center justify-center">
+                            <i class="fas fa-balance-scale text-white text-4xl opacity-50"></i>
+                        </div>
+                        <div class="p-5">
+                            <span class="text-gray-500 text-sm">Comparison</span>
+                            <h3 class="text-lg font-semibold text-gray-900 mt-1 mb-2">Midjourney vs DALL-E 3: Which is Better?</h3>
+                            <p class="text-gray-600 text-sm mb-3">An in-depth comparison of the two most popular AI art generators.</p>
+                            <a href="#" class="text-purple-600 hover:text-purple-700 text-sm font-medium">Read More</a>
+                        </div>
+                    </article>
+
+                    <article class="bg-white rounded-xl shadow-md overflow-hidden">
+                        <div class="bg-gradient-to-r from-green-400 to-teal-400 h-32 flex items-center justify-center">
+                            <i class="fas fa-magic text-white text-4xl opacity-50"></i>
+                        </div>
+                        <div class="p-5">
+                            <span class="text-gray-500 text-sm">Tips & Tricks</span>
+                            <h3 class="text-lg font-semibold text-gray-900 mt-1 mb-2">10 Tips for Better AI Art Prompts</h3>
+                            <p class="text-gray-600 text-sm mb-3">Master the art of prompt engineering to get better results.</p>
+                            <a href="#" class="text-purple-600 hover:text-purple-700 text-sm font-medium">Read More</a>
+                        </div>
+                    </article>
+
+                    <article class="bg-white rounded-xl shadow-md overflow-hidden">
+                        <div class="bg-gradient-to-r from-orange-400 to-red-400 h-32 flex items-center justify-center">
+                            <i class="fas fa-briefcase text-white text-4xl opacity-50"></i>
+                        </div>
+                        <div class="p-5">
+                            <span class="text-gray-500 text-sm">Business</span>
+                            <h3 class="text-lg font-semibold text-gray-900 mt-1 mb-2">Using AI Images for Commercial Projects</h3>
+                            <p class="text-gray-600 text-sm mb-3">Understanding licensing and best practices for business use.</p>
+                            <a href="#" class="text-purple-600 hover:text-purple-700 text-sm font-medium">Read More</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="lg:col-span-1">
+                <!-- Newsletter -->
+                <div class="bg-gradient-to-r from-purple-600 to-indigo-600 rounded-xl p-6 text-white mb-6">
+                    <h3 class="font-bold text-lg mb-2">Subscribe to Our Newsletter</h3>
+                    <p class="text-purple-100 text-sm mb-4">Get the latest AI tool news and tutorials delivered to your inbox.</p>
+                    <form id="blogNewsletterForm">
+                        <input type="email" placeholder="Your email" class="w-full px-4 py-2 rounded-lg text-gray-900 mb-3" required>
+                        <button type="submit" class="w-full bg-white text-purple-600 px-4 py-2 rounded-lg font-medium hover:bg-gray-100 transition">
+                            Subscribe
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Categories -->
+                <div class="bg-white rounded-xl shadow-md p-6 mb-6">
+                    <h3 class="font-bold text-lg mb-4">Categories</h3>
+                    <div class="space-y-2">
+                        <a href="#" class="flex justify-between items-center text-gray-700 hover:text-purple-600">
+                            <span>Tutorials</span>
+                            <span class="bg-gray-100 text-gray-600 px-2 py-1 rounded text-sm">12</span>
+                        </a>
+                        <a href="#" class="flex justify-between items-center text-gray-700 hover:text-purple-600">
+                            <span>Comparisons</span>
+                            <span class="bg-gray-100 text-gray-600 px-2 py-1 rounded text-sm">8</span>
+                        </a>
+                        <a href="#" class="flex justify-between items-center text-gray-700 hover:text-purple-600">
+                            <span>News</span>
+                            <span class="bg-gray-100 text-gray-600 px-2 py-1 rounded text-sm">15</span>
+                        </a>
+                        <a href="#" class="flex justify-between items-center text-gray-700 hover:text-purple-600">
+                            <span>Tips & Tricks</span>
+                            <span class="bg-gray-100 text-gray-600 px-2 py-1 rounded text-sm">10</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Popular Tools -->
+                <div class="bg-white rounded-xl shadow-md p-6">
+                    <h3 class="font-bold text-lg mb-4">Popular Tools</h3>
+                    <div id="popularToolsSidebar" class="space-y-3">
+                        <!-- Will be populated dynamically -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-12 mt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center text-sm">
+                <p>&copy; 2024 AI Image Hub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+            document.getElementById('mobileMenu').classList.toggle('hidden');
+        });
+
+        // Load popular tools
+        async function loadPopularTools() {
+            try {
+                const response = await fetch('/data/tools.json');
+                const data = await response.json();
+                const tools = (data.tools || [])
+                    .sort((a, b) => (b.popularity || 0) - (a.popularity || 0))
+                    .slice(0, 5);
+
+                const container = document.getElementById('popularToolsSidebar');
+                container.innerHTML = tools.map(tool => {
+                    const slug = tool.name.toLowerCase().replace(/\s+/g, '-').replace(/\./g, '-');
+                    return `
+                        <a href="/tools/${slug}" class="flex items-center hover:bg-gray-50 p-2 rounded-lg transition">
+                            <img src="/${tool.logo}" alt="${tool.name}" class="w-8 h-8 rounded" onerror="this.src='https://via.placeholder.com/32?text=${tool.name.charAt(0)}'">
+                            <div class="ml-3">
+                                <div class="font-medium text-gray-900 text-sm">${tool.name}</div>
+                                <div class="text-gray-500 text-xs">${tool.category}</div>
+                            </div>
+                        </a>
+                    `;
+                }).join('');
+            } catch (error) {
+                console.error('Error loading tools:', error);
+            }
+        }
+
+        // Newsletter form
+        document.getElementById('blogNewsletterForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            const email = this.querySelector('input').value;
+            try {
+                const response = await fetch('/api/subscribe', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ email })
+                });
+                const data = await response.json();
+                alert(data.message);
+                this.reset();
+            } catch (error) {
+                alert('Something went wrong. Please try again.');
+            }
+        });
+
+        document.addEventListener('DOMContentLoaded', loadPopularTools);
+    </script>
+</body>
+</html>

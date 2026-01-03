@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>AI Image Tools Hub - Best AI Image Generators & Editors 2024</title>
+    <meta name="description" content="Discover 30+ AI image tools. Compare Midjourney, DALL-E 3, Stable Diffusion & more. Find the perfect AI tool for image generation, editing, background removal, and enhancement.">
+    <meta name="keywords" content="AI image tools, AI art generator, Midjourney, DALL-E 3, Stable Diffusion, AI photo editor, background remover, image upscaler">
+    <meta name="author" content="AI Image Tools Hub">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="AI Image Tools Hub - Best AI Image Generators & Editors 2024">
+    <meta property="og:description" content="Discover and compare 30+ AI image tools. Find the perfect tool for your creative needs.">
+    <meta property="og:image" content="https://aiimagetools.io/images/og-image.svg">
+    <meta property="og:url" content="https://aiimagetools.io">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="AI Image Tools Hub">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AI Image Tools Hub - Best AI Image Generators & Editors">
+    <meta name="twitter:description" content="Discover and compare 30+ AI image tools. Find the perfect tool for your creative needs.">
+    <meta name="twitter:image" content="https://aiimagetools.io/images/twitter-card.svg">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://aiimagetools.io">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    
+    <!-- CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Structured Data (Schema.org) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "AI Image Tools Hub",
+        "description": "Comprehensive directory of AI-powered image tools",
+        "url": "https://aiimagetools.io",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": {
+                "@type": "EntryPoint",
+                "urlTemplate": "https://aiimagetools.io/search?q={search_term_string}"
+            },
+            "query-input": "required name=search_term_string"
+        }
+    }
+    </script>
+    
+    <style>
+        /* Critical CSS - Above the fold styles */
+        .tool-card {
+            transition: all 0.3s ease;
+        }
+        .tool-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .category-icon {
+            transition: transform 0.3s ease;
+        }
+        .category-icon:hover {
+            transform: scale(1.1);
+        }
+        /* Lazy loading placeholder */
+        .lazy-img {
+            background: #f0f0f0;
+            filter: blur(5px);
+            transition: filter 0.3s;
+        }
+        .lazy-img.loaded {
+            filter: blur(0);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- No JavaScript fallback -->
+    <noscript>
+        <div style="background:#fef3c7;color:#92400e;padding:12px;text-align:center;font-family:sans-serif;">
+            This website requires JavaScript for the best experience. Please enable JavaScript in your browser.
+        </div>
+    </noscript>
+
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" class="sr-only focus:not-sr-only">Skip to main content</a>
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50" role="navigation" aria-label="Main navigation">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <a href="/" aria-label="AI Image Hub Home">
+                            <i class="fas fa-palette text-purple-600 text-2xl mr-2" aria-hidden="true"></i>
+                            <span class="text-xl font-bold text-gray-900">AI Image Hub</span>
+                        </a>
+                    </div>
+                    <div class="hidden sm:ml-8 sm:flex sm:space-x-8">
+                        <a href="/tools" class="text-gray-700 hover:text-purple-600 px-3 py-2 text-sm font-medium">Tools</a>
+                        <a href="/categories" class="text-gray-700 hover:text-purple-600 px-3 py-2 text-sm font-medium">Categories</a>
+                        <a href="/comparisons" class="text-gray-700 hover:text-purple-600 px-3 py-2 text-sm font-medium">Comparisons</a>
+                        <a href="/blog" class="text-gray-700 hover:text-purple-600 px-3 py-2 text-sm font-medium">Blog</a>
+                    </div>
+                </div>
+                <div class="hidden sm:flex items-center space-x-4">
+                    <button class="text-gray-700 hover:text-purple-600" aria-label="Search">
+                        <i class="fas fa-search"></i>
+                    </button>
+                    <a href="/submit.html" class="bg-purple-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-purple-700 transition">
+                        Submit Tool
+                    </a>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="flex items-center sm:hidden">
+                    <button id="mobileMenuBtn" class="text-gray-700 hover:text-purple-600 p-2" aria-label="Menu">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobileMenu" class="hidden sm:hidden bg-white border-t">
+            <div class="px-4 py-2 space-y-1">
+                <a href="/tools.html" class="block px-3 py-2 text-gray-700 hover:text-purple-600">Tools</a>
+                <a href="/categories.html" class="block px-3 py-2 text-gray-700 hover:text-purple-600">Categories</a>
+                <a href="/comparisons.html" class="block px-3 py-2 text-gray-700 hover:text-purple-600">Comparisons</a>
+                <a href="/blog.html" class="block px-3 py-2 text-gray-700 hover:text-purple-600">Blog</a>
+                <a href="/submit.html" class="block px-3 py-2 text-purple-600 font-medium">Submit Tool</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="gradient-bg text-white py-20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6">
+                    Find Your Perfect AI Image Tool
+                </h1>
+                <p class="text-xl mb-8 text-purple-100">
+                    Discover, compare, and choose from 30+ AI-powered image tools
+                </p>
+                <div class="max-w-2xl mx-auto">
+                    <form action="/search" method="GET" class="bg-white rounded-lg shadow-xl p-2 flex">
+                        <input type="search" 
+                               name="q"
+                               placeholder="Search for AI tools, features, or use cases..." 
+                               class="flex-1 px-4 py-3 text-gray-700 focus:outline-none"
+                               aria-label="Search AI tools">
+                        <button type="submit" class="bg-purple-600 text-white px-6 py-3 rounded-md hover:bg-purple-700 transition">
+                            <i class="fas fa-search mr-2"></i>Search
+                        </button>
+                    </form>
+                </div>
+                <div class="mt-8 flex flex-wrap justify-center gap-3">
+                    <a href="/tools/midjourney" class="bg-white/20 backdrop-blur px-4 py-2 rounded-full text-sm hover:bg-white/30 transition">
+                        <i class="fas fa-fire mr-1"></i> Trending: Midjourney V6
+                    </a>
+                    <a href="/tools/dalle-3" class="bg-white/20 backdrop-blur px-4 py-2 rounded-full text-sm hover:bg-white/30 transition">
+                        DALL-E 3
+                    </a>
+                    <a href="/category/background-remover" class="bg-white/20 backdrop-blur px-4 py-2 rounded-full text-sm hover:bg-white/30 transition">
+                        Background Remover
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick Categories -->
+        <section class="py-12 bg-white" aria-labelledby="categories-title">
+            <h2 id="categories-title" class="sr-only">AI Tool Categories</h2>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
+                    <a href="/tools.html?category=AI Art" class="category-icon text-center cursor-pointer group">
+                        <div class="bg-gradient-to-br from-pink-500 to-purple-600 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-3 shadow-lg group-hover:shadow-xl">
+                            <i class="fas fa-paint-brush text-white text-2xl"></i>
+                        </div>
+                        <p class="text-sm font-medium text-gray-700">AI Art</p>
+                        <p class="text-xs text-gray-500">8 tools</p>
+                    </a>
+                    <a href="/tools.html?category=Background" class="category-icon text-center cursor-pointer group">
+                        <div class="bg-gradient-to-br from-blue-500 to-cyan-600 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-3 shadow-lg group-hover:shadow-xl">
+                            <i class="fas fa-cut text-white text-2xl"></i>
+                        </div>
+                        <p class="text-sm font-medium text-gray-700">Background</p>
+                        <p class="text-xs text-gray-500">5 tools</p>
+                    </a>
+                    <a href="/tools.html?category=Enhance" class="category-icon text-center cursor-pointer group">
+                        <div class="bg-gradient-to-br from-green-500 to-teal-600 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-3 shadow-lg group-hover:shadow-xl">
+                            <i class="fas fa-magic text-white text-2xl"></i>
+                        </div>
+                        <p class="text-sm font-medium text-gray-700">Enhance</p>
+                        <p class="text-xs text-gray-500">7 tools</p>
+                    </a>
+                    <a href="/tools.html?category=Avatar" class="category-icon text-center cursor-pointer group">
+                        <div class="bg-gradient-to-br from-orange-500 to-red-600 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-3 shadow-lg group-hover:shadow-xl">
+                            <i class="fas fa-user-circle text-white text-2xl"></i>
+                        </div>
+                        <p class="text-sm font-medium text-gray-700">Avatar</p>
+                        <p class="text-xs text-gray-500">1 tool</p>
+                    </a>
+                    <a href="/tools.html?category=Design" class="category-icon text-center cursor-pointer group">
+                        <div class="bg-gradient-to-br from-purple-500 to-indigo-600 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-3 shadow-lg group-hover:shadow-xl">
+                            <i class="fas fa-palette text-white text-2xl"></i>
+                        </div>
+                        <p class="text-sm font-medium text-gray-700">Design</p>
+                        <p class="text-xs text-gray-500">6 tools</p>
+                    </a>
+                    <a href="/categories.html" class="category-icon text-center cursor-pointer group">
+                        <div class="bg-gradient-to-br from-gray-500 to-gray-700 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-3 shadow-lg group-hover:shadow-xl">
+                            <i class="fas fa-ellipsis-h text-white text-2xl"></i>
+                        </div>
+                        <p class="text-sm font-medium text-gray-700">More</p>
+                        <p class="text-xs text-gray-500">3 tools</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Tools -->
+        <section class="py-16" aria-labelledby="featured-title">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between items-center mb-8">
+                    <div>
+                        <h2 id="featured-title" class="text-3xl font-bold text-gray-900">Featured Tools</h2>
+                        <p class="text-gray-600 mt-2">Hand-picked tools that excel in their category</p>
+                    </div>
+                    <a href="/tools" class="text-purple-600 hover:text-purple-700 font-medium">
+                        View All <i class="fas fa-arrow-right ml-1"></i>
+                    </a>
+                </div>
+
+                <div id="featuredToolsContainer" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Loading skeleton -->
+                    <div class="animate-pulse bg-white rounded-xl shadow-md p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-gray-200 rounded-lg"></div>
+                            <div class="ml-3">
+                                <div class="h-4 bg-gray-200 rounded w-24 mb-2"></div>
+                                <div class="h-3 bg-gray-200 rounded w-16"></div>
+                            </div>
+                        </div>
+                        <div class="h-3 bg-gray-200 rounded w-full mb-2"></div>
+                        <div class="h-3 bg-gray-200 rounded w-3/4"></div>
+                    </div>
+                    <div class="animate-pulse bg-white rounded-xl shadow-md p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-gray-200 rounded-lg"></div>
+                            <div class="ml-3">
+                                <div class="h-4 bg-gray-200 rounded w-24 mb-2"></div>
+                                <div class="h-3 bg-gray-200 rounded w-16"></div>
+                            </div>
+                        </div>
+                        <div class="h-3 bg-gray-200 rounded w-full mb-2"></div>
+                        <div class="h-3 bg-gray-200 rounded w-3/4"></div>
+                    </div>
+                    <div class="animate-pulse bg-white rounded-xl shadow-md p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-gray-200 rounded-lg"></div>
+                            <div class="ml-3">
+                                <div class="h-4 bg-gray-200 rounded w-24 mb-2"></div>
+                                <div class="h-3 bg-gray-200 rounded w-16"></div>
+                            </div>
+                        </div>
+                        <div class="h-3 bg-gray-200 rounded w-full mb-2"></div>
+                        <div class="h-3 bg-gray-200 rounded w-3/4"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter -->
+        <section class="py-16 bg-gradient-to-r from-purple-600 to-indigo-600" aria-labelledby="newsletter-title">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 id="newsletter-title" class="text-3xl font-bold text-white mb-4">
+                    Stay Updated with AI Tools
+                </h2>
+                <p class="text-purple-100 mb-8">
+                    Get weekly updates on new AI tools, exclusive deals, and expert tutorials
+                </p>
+                <form id="newsletterForm" class="max-w-md mx-auto flex gap-4">
+                    <input type="email"
+                           id="newsletterEmail"
+                           name="email"
+                           placeholder="Enter your email"
+                           required
+                           aria-label="Email address"
+                           class="flex-1 px-4 py-3 rounded-lg focus:outline-none">
+                    <button type="submit" class="bg-white text-purple-600 px-6 py-3 rounded-lg font-medium hover:bg-gray-100 transition">
+                        Subscribe
+                    </button>
+                </form>
+                <p id="newsletterMessage" class="text-purple-200 text-sm mt-4 hidden"></p>
+                <p class="text-purple-200 text-sm mt-4">
+                    Join 50,000+ creators and professionals. Unsubscribe anytime.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-12" role="contentinfo">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-palette text-purple-500 text-xl mr-2"></i>
+                        <span class="text-white font-bold">AI Image Hub</span>
+                    </div>
+                    <p class="text-sm text-gray-400">
+                        Your comprehensive guide to AI-powered image tools and technologies.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-white font-semibold mb-4">Categories</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="/category/ai-art" class="hover:text-white">AI Art Generators</a></li>
+                        <li><a href="/category/photo-enhance" class="hover:text-white">Photo Enhancers</a></li>
+                        <li><a href="/category/background" class="hover:text-white">Background Tools</a></li>
+                        <li><a href="/category/avatar" class="hover:text-white">Face & Avatar</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white font-semibold mb-4">Resources</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="/blog" class="hover:text-white">Blog</a></li>
+                        <li><a href="/tutorials" class="hover:text-white">Tutorials</a></li>
+                        <li><a href="/api" class="hover:text-white">API Directory</a></li>
+                        <li><a href="/submit" class="hover:text-white">Submit Tool</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white font-semibold mb-4">Company</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="/about" class="hover:text-white">About</a></li>
+                        <li><a href="/contact" class="hover:text-white">Contact</a></li>
+                        <li><a href="/privacy" class="hover:text-white">Privacy Policy</a></li>
+                        <li><a href="/terms" class="hover:text-white">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-sm text-gray-400">
+                <p>&copy; 2024 AI Image Hub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+            document.getElementById('mobileMenu').classList.toggle('hidden');
+        });
+
+        // Load featured tools
+        async function loadFeaturedTools() {
+            try {
+                const response = await fetch('/data/tools.json');
+                const data = await response.json();
+                const tools = data.tools || [];
+
+                // Filter featured tools and take top 6
+                const featuredTools = tools
+                    .filter(t => t.featured)
+                    .sort((a, b) => (b.popularity || 0) - (a.popularity || 0))
+                    .slice(0, 6);
+
+                const container = document.getElementById('featuredToolsContainer');
+                container.innerHTML = featuredTools.map(tool => {
+                    const slug = tool.name.toLowerCase().replace(/\s+/g, '-').replace(/\./g, '-');
+                    const stars = renderStars(tool.rating);
+                    const reviewCount = formatReviewCount(tool.reviews);
+                    const priceText = formatPrice(tool.pricing);
+
+                    return `
+                        <article class="tool-card bg-white rounded-xl shadow-md overflow-hidden">
+                            <div class="p-6">
+                                <div class="flex items-start justify-between mb-4">
+                                    <div class="flex items-center">
+                                        <img src="/${tool.logo}" alt="${tool.name} Logo" class="w-12 h-12 rounded-lg" loading="lazy" onerror="this.src='https://via.placeholder.com/48?text=${tool.name.charAt(0)}'">
+                                        <div class="ml-3">
+                                            <h3 class="font-semibold text-gray-900">${tool.name}</h3>
+                                            <div class="flex items-center mt-1">
+                                                <div class="flex text-yellow-400">${stars}</div>
+                                                <span class="text-xs text-gray-500 ml-2">${tool.rating} (${reviewCount} reviews)</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    ${tool.popularity > 90 ? '<span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full">Popular</span>' : ''}
+                                </div>
+                                <p class="text-gray-600 text-sm mb-4">${tool.description}</p>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="bg-gray-100 text-gray-700 text-xs px-3 py-1 rounded-full">${tool.category}</span>
+                                    ${tool.tags.slice(0, 1).map(tag => `<span class="bg-gray-100 text-gray-700 text-xs px-3 py-1 rounded-full">${tag}</span>`).join('')}
+                                </div>
+                                <div class="flex items-center justify-between">
+                                    <span class="text-gray-900 font-semibold">${priceText}</span>
+                                    <a href="/tools/${slug}" class="text-purple-600 hover:text-purple-700 font-medium text-sm">
+                                        Learn More <i class="fas fa-arrow-right ml-1"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+                    `;
+                }).join('');
+            } catch (error) {
+                console.error('Error loading featured tools:', error);
+            }
+        }
+
+        function renderStars(rating) {
+            const full = Math.floor(rating);
+            const half = rating % 1 >= 0.5;
+            let html = '';
+            for (let i = 0; i < full; i++) html += '<i class="fas fa-star text-sm"></i>';
+            if (half) html += '<i class="fas fa-star-half-alt text-sm"></i>';
+            for (let i = 0; i < 5 - full - (half ? 1 : 0); i++) html += '<i class="far fa-star text-sm"></i>';
+            return html;
+        }
+
+        function formatReviewCount(num) {
+            if (num >= 1000) return (num / 1000).toFixed(1) + 'k';
+            return num.toString();
+        }
+
+        function formatPrice(pricing) {
+            switch(pricing) {
+                case 'free': return 'Free';
+                case 'freemium': return 'Free to start';
+                case 'paid': return 'From $10/mo';
+                default: return pricing;
+            }
+        }
+
+        // Lazy loading for images
+        document.addEventListener('DOMContentLoaded', function() {
+            loadFeaturedTools();
+            const lazyImages = document.querySelectorAll('.lazy-img');
+            
+            const imageObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        img.classList.add('loaded');
+                        observer.unobserve(img);
+                    }
+                });
+            });
+            
+            lazyImages.forEach(img => imageObserver.observe(img));
+        });
+
+        // Search functionality
+        const searchForm = document.querySelector('form[action="/search"]');
+        searchForm.addEventListener('submit', function(e) {
+            const searchInput = this.querySelector('input[name="q"]');
+            if (!searchInput.value.trim()) {
+                e.preventDefault();
+                searchInput.focus();
+            }
+        });
+
+        // Newsletter subscription
+        const newsletterForm = document.getElementById('newsletterForm');
+        const newsletterMessage = document.getElementById('newsletterMessage');
+
+        newsletterForm.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            const email = document.getElementById('newsletterEmail').value;
+
+            try {
+                const response = await fetch('/api/subscribe', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ email: email })
+                });
+
+                const data = await response.json();
+                newsletterMessage.textContent = data.message;
+                newsletterMessage.classList.remove('hidden');
+
+                if (response.ok) {
+                    newsletterForm.reset();
+                    newsletterMessage.classList.remove('text-red-300');
+                    newsletterMessage.classList.add('text-green-300');
+                } else {
+                    newsletterMessage.classList.remove('text-green-300');
+                    newsletterMessage.classList.add('text-red-300');
+                }
+            } catch (error) {
+                newsletterMessage.textContent = 'Something went wrong. Please try again.';
+                newsletterMessage.classList.remove('hidden', 'text-green-300');
+                newsletterMessage.classList.add('text-red-300');
+            }
+        });
+
+        // Analytics (replace with your actual tracking code)
+        // Google Analytics 4
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'GA_MEASUREMENT_ID');
+    </script>
+</body>
+</html>
